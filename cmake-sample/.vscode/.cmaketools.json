@@ -1,0 +1,59 @@
+{
+  "variant": {
+    "label": "Debug",
+    "keywordSettings": {
+      "buildType": "debug"
+    },
+    "description": "Emit debug information without performing optimizations"
+  },
+  "activeEnvironments": [],
+  "codeModel": {
+    "configurations": [
+      {
+        "name": "Debug",
+        "projects": [
+          {
+            "buildDirectory": "/Users/davidshrader/Development/sandbox-cpp/cmake-sample/build",
+            "name": "cmake-sample",
+            "sourceDirectory": "/Users/davidshrader/Development/sandbox-cpp/cmake-sample",
+            "targets": [
+              {
+                "artifacts": [
+                  "/Users/davidshrader/Development/sandbox-cpp/cmake-sample/build/bin/cmake-sample"
+                ],
+                "buildDirectory": "/Users/davidshrader/Development/sandbox-cpp/cmake-sample/build",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-std=c++11 -pthread -g -DNDEBUG -D_GLIBCXX_USE_NANOSLEEP -Wall -Werror -Wextra -pedantic-errors  -g  ",
+                    "includePath": [
+                      {
+                        "path": "/Users/davidshrader/Development/sandbox-cpp/cmake-sample/build"
+                      },
+                      {
+                        "path": "/Users/davidshrader/Development/sandbox-cpp/cmake-sample"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/main.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "cmake-sample",
+                "linkLanguageFlags": "-std=c++11 -pthread -g -DNDEBUG -D_GLIBCXX_USE_NANOSLEEP -Wall -Werror -Wextra -pedantic-errors  -g",
+                "linkerLanguage": "CXX",
+                "name": "cmake-sample",
+                "sourceDirectory": "/Users/davidshrader/Development/sandbox-cpp/cmake-sample",
+                "type": "EXECUTABLE"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "cookie": "0.2948678091549519",
+    "inReplyTo": "codemodel",
+    "type": "reply"
+  }
+}

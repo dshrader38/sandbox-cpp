@@ -1,0 +1,87 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "presentation": {
+        "reveal": "always",
+        "panel": "new"
+    },
+    "options": {
+        "cwd": "${workspaceRoot}/build"
+    },
+    "tasks": [
+        {
+            "taskName": "echo",
+            "type": "shell",
+            "command": "echo Hello",
+            "problemMatcher": []
+        },
+        {
+            "taskName": "windows",
+            "type": "shell",
+            "command": "build.bat",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "taskName": "clang",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-Wall",
+                "main.cpp",
+                "-v"
+            ],
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "taskName": "gcc",
+            "type": "shell",
+            "command": "g++-7",
+            "args": [
+                "-Wall",
+                "main.cpp",
+                "-v"
+            ],
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },        
+        {
+            "taskName": "cmake",
+            "command": "cmake",
+            "args": [
+                "CMakeLists.txt"
+                //"-G 'Unix Makefiles'",
+                //"-DCMAKE_BUILD_TYPE=Debug .."
+            ]
+        }
+    ]
+}
